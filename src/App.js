@@ -7,10 +7,12 @@ import Home from "./pages/Home"
 import About from "./pages/About.jsx"
 import Contact from "./pages/Contact.jsx"
 
+import "./App.css";
+
 const App = () => {
   
   return (
-    <div>
+    <div className = "App">
       <ResponsiveDrawer/>
       <Routes>
           <Route exact path="/" component={<Home />} />

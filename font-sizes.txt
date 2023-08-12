@@ -1,0 +1,4 @@
+h1:Main heading: 28px
+h2:sub heading: 24px
+h4:18px
+p:15px

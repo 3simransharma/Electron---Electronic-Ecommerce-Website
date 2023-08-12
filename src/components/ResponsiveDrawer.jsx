@@ -18,9 +18,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
+import TreeView from '@mui/lab/TreeView';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import TreeItem from '@mui/lab/TreeItem';
+
 import Home from "../pages/Home"
 import About from "../pages/About.jsx"
 import Contact from "../pages/Contact.jsx"
+import Authentication from '../pages/Authentication';
 
 const drawerWidth = 240;
 
@@ -41,34 +47,38 @@ function ResponsiveDrawer() {
   const drawer = (
     <div>
       <img className='m-4 ml-5' src = "https://i.ibb.co/QP3gH5r/logo.png" alt = "logo" style = {{height:"25px",width:"auto"}}/>
-      {/* <Toolbar /> */}
+
       <Divider />
+
       <List>
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/" onClick={() => handleItemClick('home')}>
             <ListItemIcon>
-              <InboxIcon />
+              {/* <InboxIcon /> */}
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItemButton>
         </ListItem>
+
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="/about" onClick={() => handleItemClick('about')}>
+          <ListItemButton component={Link} to="/authentication" onClick={() => handleItemClick('authentication')}>
             <ListItemIcon>
-              <MailIcon />
+              {/* <MailIcon /> */}
             </ListItemIcon>
-            <ListItemText primary="About" />
+            <ListItemText primary="Authentication" />
           </ListItemButton>
         </ListItem>
+
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/contact" onClick={() => handleItemClick('contact')}>
             <ListItemIcon>
-              <InboxIcon />
+              {/* <InboxIcon /> */}
             </ListItemIcon>
             <ListItemText primary="Contact" />
           </ListItemButton>
         </ListItem>
       </List>
+      
       <Divider />
     </div>
   );
@@ -139,6 +149,7 @@ function ResponsiveDrawer() {
         {activeItem === 'home' && <Home />}
         {activeItem === 'about' && <About />}
         {activeItem === 'contact' && <Contact />}
+        {activeItem === 'authentication' && <Authentication />}
       </Box>
     </Box>
   );
