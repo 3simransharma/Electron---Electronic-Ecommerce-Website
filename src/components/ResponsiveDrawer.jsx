@@ -73,7 +73,7 @@ function ResponsiveDrawer() {
           <ListItemButton component={Link} to="/cartandwishlist" onClick={() => handleItemClick('cartandwishlist')}>
             <ListItemIcon>
             </ListItemIcon>
-            <ListItemText primary="When you click on any Product" />
+            <ListItemText primary="When you click on any one Product" />
           </ListItemButton>
         </ListItem>
 
