@@ -6,7 +6,7 @@ import TabPanel from '@mui/joy/TabPanel';
 import { DesktopWindows, PhoneAndroid } from '@mui/icons-material';
 import { Image } from 'react-bootstrap';
 
-const ImagesAccordingToDevices = ({mobileImage,desktopImage}) => {
+const ImagesAccordingToDevices = ({mobileImage,desktopImage,desktop_height = "400px"}) => {
 
     const [selectedTab, setSelectedTab] = React.useState(0);
 
@@ -32,7 +32,7 @@ const ImagesAccordingToDevices = ({mobileImage,desktopImage}) => {
             </TabPanel>
 
             <TabPanel value = {0}>
-                <Image src={desktopImage} style = {{height:"400px"}} />
+                <Image src={desktopImage} style = {{height:desktop_height}} />
             </TabPanel>
         </Tabs>
     </>

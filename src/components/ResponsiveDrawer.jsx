@@ -27,6 +27,8 @@ import Home from "../pages/Home"
 import About from "../pages/About.jsx"
 import Contact from "../pages/Contact.jsx"
 import Authentication from '../pages/Authentication';
+import OrderAnItem from "../pages/OrderAnItem";
+import CartAndWishlist from '../pages/CartAndWishlist';
 
 const drawerWidth = 240;
 
@@ -54,7 +56,6 @@ function ResponsiveDrawer() {
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/" onClick={() => handleItemClick('home')}>
             <ListItemIcon>
-              {/* <InboxIcon /> */}
             </ListItemIcon>
             <ListItemText primary="About the Project" />
           </ListItemButton>
@@ -63,16 +64,22 @@ function ResponsiveDrawer() {
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/authentication" onClick={() => handleItemClick('authentication')}>
             <ListItemIcon>
-              {/* <MailIcon /> */}
             </ListItemIcon>
             <ListItemText primary="Authentication" />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="/contact" onClick={() => handleItemClick('contact')}>
+          <ListItemButton component={Link} to="/cartandwishlist" onClick={() => handleItemClick('cartandwishlist')}>
             <ListItemIcon>
-              {/* <InboxIcon /> */}
+            </ListItemIcon>
+            <ListItemText primary="When you click on any Product" />
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/orderanitem" onClick={() => handleItemClick('orderanitem')}>
+            <ListItemIcon>
             </ListItemIcon>
             <ListItemText primary="Order an Item" />
           </ListItemButton>
@@ -81,7 +88,6 @@ function ResponsiveDrawer() {
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/contact" onClick={() => handleItemClick('contact')}>
             <ListItemIcon>
-              {/* <InboxIcon /> */}
             </ListItemIcon>
             <ListItemText primary="Contact" />
           </ListItemButton>
@@ -103,7 +109,7 @@ function ResponsiveDrawer() {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
-        style = {{padding:"5px 0"}}
+        style = {{padding:"5px 0",margin:"0px 0 10px 0"}}
       >
         <Toolbar>
           <IconButton
@@ -160,6 +166,8 @@ function ResponsiveDrawer() {
         {activeItem === 'about' && <About />}
         {activeItem === 'contact' && <Contact />}
         {activeItem === 'authentication' && <Authentication />}
+        {activeItem === 'orderanitem' && <OrderAnItem />}
+        {activeItem === 'cartandwishlist' && <CartAndWishlist />}
       </Box>
     </Box>
   );
