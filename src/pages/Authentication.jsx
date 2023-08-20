@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 import "./pagescss.css";
+import ImagesAccordingToDevices from '../components/ImagesAccordingToDevices';
 
 const Authentication = () => {
 
@@ -18,7 +19,7 @@ const Authentication = () => {
     
     useEffect(() => {
         const itemCount = 3; // Change this to the actual number of items in the TreeView
-        const calculatedHeight = itemCount * 40 + 'px'; // Adjust the value as needed
+        const calculatedHeight = itemCount * 90 + 'px'; // Adjust the value as needed
         setTreeHeight(calculatedHeight);
     }, []);
 
@@ -42,7 +43,12 @@ const Authentication = () => {
         }}
         style={{ padding: "20px 20px 20px 20px" }}
     >
-        <TreeItem nodeId="1" label="Anchor Links" sx={{ fontSize: "24px" }}>
+        <TreeItem nodeId="1" label="Authentication" sx={{ fontSize: "24px" }} defaultExpanded>
+
+        <TreeItem
+            nodeId="3"
+            label={<a href="#register">Register</a>}
+        />
 
         <TreeItem
             nodeId="2"
@@ -53,11 +59,6 @@ const Authentication = () => {
             label={<a href="#forgotPassword">What happens when you forget Password?</a>}
             />
         </TreeItem>
-
-        <TreeItem
-            nodeId="3"
-            label={<a href="#register">Register</a>}
-        />
         
         </TreeItem>
     </TreeView>
@@ -82,7 +83,8 @@ const Authentication = () => {
 
         <br />
         <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image src="https://i.ibb.co/D1KqH89/image.png" style = {{height:"400px"}} />
+            {/* <Image src="https://i.ibb.co/D1KqH89/image.png" style = {{height:"400px"}} /> */}
+            <ImagesAccordingToDevices mobileImage={"https://i.ibb.co/TMZMkmV/IMG-20230820-123839.jpg"} desktopImage={"https://i.ibb.co/TtLNvDn/62.png"}/>
         </div>
         <br />
 
@@ -102,7 +104,8 @@ const Authentication = () => {
 
         <br />
         <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image src="https://i.ibb.co/gRqnPs4/image.png" style = {{height:"400px"}} />
+            {/* <Image src="https://i.ibb.co/gRqnPs4/image.png" style = {{height:"400px"}} /> */}
+            <ImagesAccordingToDevices mobileImage={"https://i.ibb.co/gRqnPs4/image.png"} desktopImage={"https://i.ibb.co/gRqnPs4/image.png"}/>
         </div>
         <br />
 
@@ -120,7 +123,8 @@ const Authentication = () => {
 
         <br />
         <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image src="https://i.ibb.co/gRqnPs4/image.png" style = {{height:"300px"}} />
+            {/* <Image src="https://i.ibb.co/gRqnPs4/image.png" style = {{height:"300px"}} /> */}
+            <ImagesAccordingToDevices mobileImage={"https://i.ibb.co/gRqnPs4/image.png"} desktopImage={"https://i.ibb.co/gRqnPs4/image.png"}/>
         </div>
         <br />
 
@@ -128,7 +132,8 @@ const Authentication = () => {
         
         <br />
         <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image src = "https://i.ibb.co/fDW93Lp/58.jpg" style = {{height:"300px"}} />
+            {/* <Image src = "https://i.ibb.co/fDW93Lp/58.jpg" style = {{height:"300px"}} /> */}
+            <ImagesAccordingToDevices mobileImage={"https://i.ibb.co/fDW93Lp/58.jpg"} desktopImage={"https://i.ibb.co/TtLNvDn/62.png"}/>
         </div>
         <br />
 
@@ -138,7 +143,8 @@ const Authentication = () => {
 
         <br />
         <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image src = "https://i.ibb.co/M8bjH2Q/59.jpg" style = {{height:"200px"}} />
+            {/* <Image src = "https://i.ibb.co/M8bjH2Q/59.jpg" style = {{height:"200px"}} /> */}
+            <ImagesAccordingToDevices mobileImage={"https://i.ibb.co/TMZMkmV/IMG-20230820-123839.jpg"} desktopImage={"https://i.ibb.co/TtLNvDn/62.png"}/>
         </div>
         <br />
 
@@ -146,7 +152,8 @@ const Authentication = () => {
 
         <br />
         <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image src = "https://i.ibb.co/sQG0yyL/60.jpg" style = {{height:"300px"}} />
+            {/* <Image src = "https://i.ibb.co/sQG0yyL/60.jpg" style = {{height:"300px"}} /> */}
+            <ImagesAccordingToDevices mobileImage={"https://i.ibb.co/TMZMkmV/IMG-20230820-123839.jpg"} desktopImage={"https://i.ibb.co/TtLNvDn/62.png"}/>
         </div>
         <br />
         <p>

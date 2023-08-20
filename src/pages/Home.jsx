@@ -1,6 +1,8 @@
 import React from 'react'
 import { Image } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
+import ImagesAccordingToDevices from '../components/ImagesAccordingToDevices';
+import home_desktop from "../images/desktop/home.png";
 
 const Home = () => {
   return (
@@ -15,8 +17,9 @@ const Home = () => {
         
         <br />
 
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Image src="https://i.ibb.co/ZSv8f3D/image.png" style = {{height:"400px"}} />
+        <div style={{ display: "flex"}} className = "justify-content-center ">
+          {/* <Image src="https://i.ibb.co/ZSv8f3D/image.png" style = {{height:"400px"}} /> */}
+            <ImagesAccordingToDevices mobileImage={"https://i.ibb.co/TMZMkmV/IMG-20230820-123839.jpg"} desktopImage={home_desktop}/>
         </div>
 
         <br />

@@ -56,7 +56,7 @@ function ResponsiveDrawer() {
             <ListItemIcon>
               {/* <InboxIcon /> */}
             </ListItemIcon>
-            <ListItemText primary="Home" />
+            <ListItemText primary="About the Project" />
           </ListItemButton>
         </ListItem>
 
@@ -66,6 +66,15 @@ function ResponsiveDrawer() {
               {/* <MailIcon /> */}
             </ListItemIcon>
             <ListItemText primary="Authentication" />
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/contact" onClick={() => handleItemClick('contact')}>
+            <ListItemIcon>
+              {/* <InboxIcon /> */}
+            </ListItemIcon>
+            <ListItemText primary="Order an Item" />
           </ListItemButton>
         </ListItem>
 
@@ -94,6 +103,7 @@ function ResponsiveDrawer() {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
+        style = {{padding:"5px 0"}}
       >
         <Toolbar>
           <IconButton
